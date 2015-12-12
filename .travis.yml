@@ -7,10 +7,10 @@ deploy:
   detect_encoding: true
   provider: s3
   region: us-west-2
-  access_key_id: AKIAJQ3SJSUKUT6ONX2A
+  access_key_id: AKIAJEMLWTBFDSY6Q3UQ
   secret_access_key:
-    secure: 
-  bucket: micah.codes
+    secure: PEA2+vv5RyNwFJB/SPfpRfSE1Ip4Sop016Bx3XJIQHiMlxQQFTWxClrW4GNPfCPi+xh4NEqBWHdGSOWuRKbHui4sgYad0k2OmE9ifap/MTtm4x9+DrYL6ant/+JLRVuofVv3UtQ1heUNmGYVWFkK7ut+0b1tBpatPqmeFxvwYsAXGGdf0G98N5y3ngUugubnOCnPbdHcU/Y8NffrEuyGvLvuLwq+fyw4KgVc+Oxv5Ny0qAfVWZg6og2FdEi2h1AJkFKQgpOQ9+DyWZzSj0XKsZZAW2iuPk1AnfTd9GcPAemPU7P9YKDonT4ZNdZBUuIFwEmmb61dMvMerp9V9esg9dWxaRbEf0G0YJPBQg1s8UaApSeZB47vD/1VkFTqa0rzxWH13ttvW4RftVsJJcYlw+kg/WAk9+Tn2MBfBBb5I3Fyz6DozOk+U7aGr+szW18CH3x3XXtYQwf23rxudyMJ/n3YR7My/f8m/2HQo6L7p5lhei0nnGPkldlOxn01WYcLoRdCP6KETA47lmG4cbq1JTIgeRt1mXy/vsOnptfpHO0kuKdd0Evys7ZLSgN4r60qmbrQE8wZBNTHQAii6wHN/o4WdYbbB4i9ATKRY2VArPRmPgpKYcHxsTCUko2HJ79FdlLJTlAIoMzczvgHOE+7GqWOeQSfImPSV/rHdulQ4q0=
+  bucket: visualregressiontesting.com
   local-dir: dist
   acl: public_read
   skip_cleanup: true
