@@ -34,12 +34,10 @@ var options = {
 
 // Metadata to be passed to templates
 var metadata = {
-  title: "Micah Codes",
-  description: "My Blog",
   site: {
-    title: "Micah Codes",
-    url: "http://micah.codes",
-    author: "Micah Godbolt"
+    title: "Visual Regression Testing",
+    url: "http://visualregressiontesting.com",
+    author: "Micah Godbolt & Kevin Lamping"
   }
 }
 
