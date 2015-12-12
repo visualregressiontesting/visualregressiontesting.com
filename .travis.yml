@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+- 4.2.1
+script:
+- node metalsmith.js
+deploy:
+  detect_encoding: true
+  provider: s3
+  region: us-west-2
+  access_key_id: AKIAJQ3SJSUKUT6ONX2A
+  secret_access_key:
+    secure: 
+  bucket: micah.codes
+  local-dir: dist
+  acl: public_read
+  skip_cleanup: true
+  on:
+    repo: micahgodbolt/visualregressiontesting
+    branch: master
