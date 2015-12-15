@@ -10,3 +10,6 @@ http://www.gizra.com/content/shoov-monitor-twitter/
 http://www.gizra.com/content/visual-regression-tutorials/
 http://www.gizra.com/content/visual-monitor-drupal/
 https://www.lullabot.com/articles/css-regression-testing-with-resemblejs
+
+Maybe (a little out of date though):
+http://blog.kevinlamping.com/easy-ui-regression-testing-with-wraith-and-travisci/
