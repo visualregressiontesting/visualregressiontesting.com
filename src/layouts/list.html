@@ -1,0 +1,26 @@
+{% extends 'extends/base.html' %}
+
+{% set
+  groups = {
+    "blogs": "Blog List",
+    "videos": "Video List",
+    "tools": "Tools List"
+  }
+%}
+
+{% block body %}
+
+  {% for group, group_title in groups %}
+
+    {% if category == group or category == 'all' %}
+      <section>
+        {% if category == 'all' %}<h2><a href="{{group}}.html">{{group_title}}</a></h2>
+        {% else %}<h2>{{group_title}}</h2>
+        {% endif %}
+
+        {% include "partials/" + group + "-list.html" %}
+      </section>
+    {% endif %}
+  {% endfor %}
+
+{% endblock %}

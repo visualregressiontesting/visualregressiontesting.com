@@ -1,7 +1,7 @@
 ---
 title: Home
-layout: home.html
-permalink: false
+layout: list.html
+category: all
 position: 0
 ---
 

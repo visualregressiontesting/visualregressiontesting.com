@@ -2,10 +2,8 @@ var Metalsmith = require('metalsmith');
 var drafts = require('metalsmith-drafts');
 var markdown = require('metalsmith-markdown');
 var excerpts = require('metalsmith-excerpts');
-var permalinks = require('metalsmith-permalinks');
 var layouts = require('metalsmith-layouts');
 var collections = require('metalsmith-collections');
-var dateInFilename = require('metalsmith-date-in-filename');
 var feed = require('metalsmith-feed');
 var serve = require('metalsmith-serve');
 var watch = require('metalsmith-watch');
@@ -18,11 +16,11 @@ var metalsmith = Metalsmith(__dirname);
 
 // General Options for build process
 var options = {
-  source_dir : 'src/content',
+  source_dir : 'src',
   dist_dir : 'dist',
   layout_dir : 'src/layouts',
   watch: {
-    "${source}/**/*": true,
+    "${source}/**/*.md": true,
     'src/layouts/**/*.html' : "**/*",
   },
   port: 8080,
@@ -43,14 +41,21 @@ var metadata = {
 
 // Page collections like all pages or all posts
 var site_collections = {
-  posts: {
-    pattern: 'posts/*.md',
-    sortBy: 'date',
-    reverse: true
+  all: {
+    pattern: 'content/**/*.md'
+  },
+  blogs: {
+    pattern: 'content/blogs/*.md'
+  },
+  videos: {
+    pattern: 'content/videos/*.md'
+  },
+  tools: {
+    pattern: 'content/tools/*.md'
   },
   pages: {
-    pattern: '*.md',
-    sortBy: 'position',
+    pattern: 'pages/*.md',
+    sortBy: 'position'
   }
 }
 
@@ -82,16 +87,12 @@ metalsmith
   .source(options.source_dir)
   .clean(true)
   .use(drafts(true))
-  .use(dateInFilename(true))
   .use(collections(site_collections))
   .use(markdown())
   .use(excerpts())
-  .use(permalinks({
-    pattern: ':title'
-  }))
   .use(assets(options.assets))
   .use(feed({
-    collection: 'posts'
+    collection: 'all'
   }))
   .use(layouts({
       engine: 'nunjucks',
