@@ -32,6 +32,20 @@ var options = {
 
 // Metadata to be passed to templates
 var metadata = {
+  categories: [
+    {
+      "collection": "blogs",
+      "title": "Blog Listings"
+    },
+    {
+      "collection": "videos",
+      "title": "Video Listings"
+    },
+    {
+      "collection": "tools",
+      "title": "Tool Listings"
+    }
+  ],
   site: {
     title: "Visual Regression Testing",
     url: "http://visualregressiontesting.com",

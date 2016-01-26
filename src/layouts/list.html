@@ -1,24 +1,22 @@
 {% extends 'extends/base.html' %}
 
-{% set
-  groups = {
-    "blogs": "Blog List",
-    "videos": "Video List",
-    "tools": "Tools List"
-  }
-%}
+{#
+  Set category titles for homepage and internal pages.
+  Can't do page by page due to needing titles on homepage .
+  Key matches category value on individual page. Homepage is category "all"
+#}
 
 {% block body %}
-
-  {% for group, group_title in groups %}
-
-    {% if category == group or category == 'all' %}
+  {# loop through all categories to populate homepage or individual page #}
+  {% for item in categories %}
+    {% if category == item.collection or category == 'all' %}
       <section>
-        {% if category == 'all' %}<h2><a href="{{group}}.html">{{group_title}}</a></h2>
-        {% else %}<h2>{{group_title}}</h2>
+        {# Set href on homepage, but not on inside page #}
+        {% if category == 'all' %}<h2><a href="{{item.collection}}.html">{{item.title}}</a></h2>
+        {% else %}<h2>{{item.title}}</h2>
         {% endif %}
-
-        {% include "partials/" + group + "-list.html" %}
+        {# Call unique group listing page. Markup differs for each category #}
+        {% include "partials/" + item.collection + "-list.html" %}
       </section>
     {% endif %}
   {% endfor %}
