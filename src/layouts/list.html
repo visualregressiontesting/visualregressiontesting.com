@@ -4,19 +4,26 @@
   Set category titles for homepage and internal pages.
   Can't do page by page due to needing titles on homepage .
   Key matches category value on individual page. Homepage is category "all"
+  loop through all categories to populate homepage or individual page
+  Set href on homepage, but not on inside page
+  Call unique group listing page. Markup differs for each category
 #}
 
 {% block body %}
-  {# loop through all categories to populate homepage or individual page #}
+
   {% for item in categories %}
     {% if category == item.collection or category == 'all' %}
-      <section>
-        {# Set href on homepage, but not on inside page #}
-        {% if category == 'all' %}<h2><a href="{{item.collection}}.html">{{item.title}}</a></h2>
-        {% else %}<h2>{{item.title}}</h2>
+      <section class="category {{item.collection}}">
+        {% if category == 'all' %}
+          <h2 class="category-title">
+            <a href="{{item.collection}}.html">{{item.title}}</a>
+          </h2>
+        {% else %}
+          <h2 class="category-title">{{item.title}}</h2>
         {% endif %}
-        {# Call unique group listing page. Markup differs for each category #}
-        {% include "partials/" + item.collection + "-list.html" %}
+        <div class="category-items">
+            {% include "partials/" + item.collection + "-list.html" %}
+        </div>
       </section>
     {% endif %}
   {% endfor %}

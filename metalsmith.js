@@ -8,6 +8,7 @@ var feed = require('metalsmith-feed');
 var serve = require('metalsmith-serve');
 var watch = require('metalsmith-watch');
 var assets = require('metalsmith-assets');
+var sass = require('metalsmith-sass');
 var nunjucks = require('nunjucks');
 var nunjucksDate = require('nunjucks-date');
 var metalsmith = Metalsmith(__dirname);
@@ -21,7 +22,8 @@ var options = {
   layout_dir : 'src/layouts',
   watch: {
     "${source}/**/*.md": true,
-    'src/layouts/**/*.html' : "**/*",
+    'src/layouts/**/*' : "**/*",
+    'src/sass/**/*.scss' : "**/*.scss",
   },
   port: 8080,
   assets: {
@@ -107,6 +109,9 @@ metalsmith
   .use(assets(options.assets))
   .use(feed({
     collection: 'all'
+  }))
+  .use(sass({
+    outputDir: 'css/'
   }))
   .use(layouts({
       engine: 'nunjucks',
