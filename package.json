@@ -30,6 +30,7 @@
     "nunjucks": "^2.2.0",
     "nunjucks-date": "^1.2.0",
     "yeoman-generator": "^0.22.5",
+    "yo": "^1.6.0",
     "yosay": "^1.1.0"
   },
   "dependencies": {
