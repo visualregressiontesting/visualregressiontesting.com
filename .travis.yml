@@ -15,5 +15,5 @@ deploy:
   acl: public_read
   skip_cleanup: true
   on:
-    repo: micahgodbolt/visualregressiontesting
+    repo: visualregressiontesting/visualregressiontesting.com
     branch: master
