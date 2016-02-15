@@ -36,16 +36,16 @@ var options = {
 var metadata = {
   categories: [
     {
-      "collection": "blogs",
-      "title": "Blog Listings"
+      "collection": "articles",
+      "title": "Articles"
     },
     {
       "collection": "videos",
-      "title": "Video Listings"
+      "title": "Videos"
     },
     {
       "collection": "tools",
-      "title": "Tool Listings"
+      "title": "Tools"
     }
   ],
   site: {
@@ -60,8 +60,8 @@ var site_collections = {
   all: {
     pattern: 'content/**/*.md'
   },
-  blogs: {
-    pattern: 'content/blogs/*.md'
+  articles: {
+    pattern: 'content/articles/*.md'
   },
   videos: {
     pattern: 'content/videos/*.md'
@@ -70,7 +70,7 @@ var site_collections = {
     pattern: 'content/tools/*.md'
   },
   pages: {
-    pattern: 'pages/*.md',
+    pattern: '*.md',
     sortBy: 'position'
   }
 }

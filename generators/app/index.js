@@ -17,7 +17,7 @@ module.exports = yeoman.generators.Base.extend({
         type: 'list',
         name: 'type',
         message: 'What category does this belong to?',
-        choices: ['blogs', 'books', 'podcasts', 'talks', 'tools', 'videos']
+        choices: ['articles', 'books', 'podcasts', 'talks', 'tools', 'videos']
       },
       {
         type: 'input',

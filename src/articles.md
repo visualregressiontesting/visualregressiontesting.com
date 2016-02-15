@@ -1,6 +1,6 @@
 ---
-title: Tools
+title: Articles
 layout: list.html
-category: tools
+category: articles
 position: 99
 ---

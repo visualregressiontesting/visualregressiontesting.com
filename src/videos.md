@@ -1,5 +1,5 @@
 ---
-title: Visual Regression Testing Blog Articles
+title: Videos
 layout: list.html
 category: videos
 position: 99

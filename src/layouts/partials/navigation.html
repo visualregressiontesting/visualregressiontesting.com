@@ -1,7 +1,7 @@
-<nav>
-  <ul>
+<nav class="nav">
+  <ul class="nav-items">
   {% for page in collections.pages %}
-    <li><a href="/{{page.path}}" title="{{page.title}}">{{page.title}}</a></li>
+    <li class="nav-item"><a class="nav-link" href="/{{page.filename|replace("md", "html")}}" title="{{page.title}}">{{page.title}}</a></li>
   {% endfor %}
   </ul>
 </nav>
