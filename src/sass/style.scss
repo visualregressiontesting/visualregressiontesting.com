@@ -67,19 +67,28 @@ a {
   margin-bottom: 2em;
 
   &-title {
-    margin: .5em 0;
+    margin: 0 0 .5em;
     border-bottom: 1px solid lighten($orange, 45%);
-    padding-left: .5em;
-    padding-bottom: .5em;
+    padding: .5em;
+    background: $orange;
+    color: white;
+    a {
+      color: white;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
   &-items {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
     align-content: flex-start;
 
     > * {
-      flex-basis: 31%;
+      @media (min-width: 33em) {
+          flex-basis: 31.3333%;
+      }
+      margin: 0 1%;
       padding: 1em;
       border: 1px solid lighten($orange, 50%);
       background: lighten($orange, 70%);

@@ -1,7 +1,6 @@
 {% for item in collections.videos %}
   <article>
     <h3><a href="{{item.link}}">{{item.title}}</a></h3>
-    <p>Posted on {{item.site}} <br> Running time: {{item.time}}</p>
     {{item.excerpt|safe}}
   </article>
 {% endfor %}
