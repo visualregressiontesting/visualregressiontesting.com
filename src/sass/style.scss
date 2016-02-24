@@ -1,4 +1,7 @@
 $orange: #ea5906;
+$blue: #104E99;
+$yellow: #EA9206;
+$green: #049970;
 
 html {
   -webkit-box-sizing: border-box;
@@ -63,7 +66,13 @@ a {
 }
 
 .category {
-  border: 1px solid lighten($orange, 40%);
+  border: 1px solid lighten($yellow, 40%);
+  &[data-category="videos"]{
+    border: 1px solid lighten($blue, 40%);
+  }
+  &[data-category="tools"]{
+    border: 1px solid lighten($green, 40%);
+  }
   margin-bottom: 2em;
 
   &-title {
@@ -78,6 +87,15 @@ a {
         text-decoration: underline;
       }
     }
+    [data-category="articles"] &{
+      background: $yellow;
+    }
+    [data-category="videos"] &{
+      background: $blue;
+    }
+    [data-category="tools"] &{
+      background: $green;
+    }
   }
   &-items {
     display: flex;
@@ -90,19 +108,56 @@ a {
       }
       margin: 0 1%;
       padding: 1em;
-      border: 1px solid lighten($orange, 50%);
+      border: 1px solid rgba(#000, .05);
       background: lighten($orange, 70%);
       margin-bottom: 1em;
       min-width: 15em;
       position: relative;
       &:hover,
       &:focus {
-        background: lighten($orange, 50%);
+        color: white;
+        a {
+          color: white;
+          display: block;
+        }
+        [data-category="articles"] &{
+          background: $yellow;
+        }
+        [data-category="videos"] &{
+          background: $blue;
+        }
+        [data-category="tools"] &{
+          background: $green;
+        }
       }
 
       h3 {
         margin-top: 0;
       }
     }
+  }
+}
+
+
+/// Learn VRT Banner
+
+.learn-vrt {
+  display: flex;
+  background: $orange;
+  padding: .5em 1em;
+  margin-bottom: 2em;
+  &-copy {
+    font-size: 1em;
+    flex-grow: 1;
+    margin: 0 1em 0 0;
+    align-self: center;
+    color: white;
+  }
+  &-link {
+    color: white;
+    border: 1px solid white;
+    display: block;
+    align-self: center;
+    padding: .7em;
   }
 }

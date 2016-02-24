@@ -1,5 +1,7 @@
 {% extends 'extends/base.html' %}
 
+
+
 {#
   Set category titles for homepage and internal pages.
   Can't do page by page due to needing titles on homepage .
@@ -11,9 +13,13 @@
 
 {% block body %}
 
+{% if category == 'all' %}
+{% include "partials/learn-vrt.html" %}
+{% endif %}
+
   {% for item in categories %}
     {% if category == item.collection or category == 'all' %}
-      <section class="category {{item.collection}}">
+      <section class="category" data-category="{{item.collection}}">
         {% if category == 'all' %}
           <h2 class="category-title">
             <a href="{{item.collection}}.html">{{item.title}}</a>
