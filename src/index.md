@@ -1,5 +1,5 @@
 ---
-title: Everything
+title: Home
 layout: list.html
 category: all
 position: 0
