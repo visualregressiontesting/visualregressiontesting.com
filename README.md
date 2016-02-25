@@ -1,7 +1,7 @@
 # visualregressiontesting
 
 ```
-$ git clone git@github.com:micahgodbolt/visualregressiontesting.git && cd visualregressiontesting
+$ git clone git@github.com:visualregressiontesting/visualregressiontesting.com.git && cd visualregressiontesting.com
 $ npm install
 $ npm run start
 ```

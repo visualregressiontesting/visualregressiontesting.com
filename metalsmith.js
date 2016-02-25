@@ -49,6 +49,7 @@ var metadata = {
     }
   ],
   site: {
+    description: "Welcome to the ultimate collection of Visual Regression Testing resources. Find articles, video tutorials about visual testing, and browse our list of testing tools to get your project up and running.",
     title: "Visual Regression Testing",
     url: "http://visualregressiontesting.com",
     author: "Micah Godbolt & Kevin Lamping"
