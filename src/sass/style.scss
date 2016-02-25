@@ -2,6 +2,8 @@ $orange: #ea5906;
 $blue: #104E99;
 $yellow: #EA9206;
 $green: #049970;
+$light-gray: #efefef;
+$gray: #ccc;
 
 html {
   -webkit-box-sizing: border-box;
@@ -66,18 +68,12 @@ a {
 }
 
 .category {
-  border: 1px solid lighten($yellow, 40%);
-  &[data-category="videos"]{
-    border: 1px solid lighten($blue, 40%);
-  }
-  &[data-category="tools"]{
-    border: 1px solid lighten($green, 40%);
-  }
+  background: $light-gray;
   margin-bottom: 2em;
 
   &-title {
-    margin: -1px -1px .5em;
-    border-bottom: 1px solid lighten($orange, 45%);
+    margin: 0px 0px .5em;
+    border-bottom: 6px solid $gray;
     padding: .5em;
     background: $orange;
     color: white;
