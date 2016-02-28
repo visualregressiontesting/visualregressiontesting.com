@@ -34,7 +34,9 @@ a {
   margin: 2em 0;
   &-title {
     margin: 0;
-
+    a {
+      display: block;
+    }
   }
 }
 
@@ -150,6 +152,8 @@ a {
     color: white;
   }
   &-link {
+    text-align: center;
+    flex: .7 0 80px;
     color: white;
     border: 1px solid white;
     display: block;
