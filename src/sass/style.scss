@@ -150,20 +150,30 @@ a {
   background: $orange;
   padding: .5em 1em;
   margin-bottom: 2em;
+  font-size: 1.2em;
+
   &-copy {
-    font-size: 1em;
     flex-grow: 1;
-    margin: 0 1em 0 0;
+    margin: 0 2em 0 0;
     align-self: center;
     color: white;
+    text-align: right;
+    text-shadow: 1px 1px rgba(0, 0, 0, .2);
   }
   &-link {
     text-align: center;
-    flex: .7 0 80px;
     color: white;
     border: 1px solid white;
     display: block;
     align-self: center;
-    padding: .7em;
+    padding: .5em 1.5em .5em 2em;
+    background: rgba(0, 0, 0, .05);
+    font-weight: bold;
+
+    &:hover,
+    &:focus {
+      background: rgba(255, 255, 255, .2);
+      text-shadow: 1px 1px rgba(0, 0, 0, .2);
+    }
   }
 }
