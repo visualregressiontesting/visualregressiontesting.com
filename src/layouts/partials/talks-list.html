@@ -1,0 +1,6 @@
+{% for item in collections.talks %}
+  <article>
+    <h3><a href="{{item.url}}">{{item.title}}</a></h3>
+    {{item.excerpt|safe}}
+  </article>
+{% endfor %}

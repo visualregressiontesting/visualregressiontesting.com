@@ -46,6 +46,10 @@ var metadata = {
     {
       "collection": "tools",
       "title": "Tools"
+    },
+    {
+      "collection": "talks",
+      "title": "Talks"
     }
   ],
   site: {
@@ -69,6 +73,9 @@ var site_collections = {
   },
   tools: {
     pattern: 'content/tools/*.md'
+  },
+  talks: {
+    pattern: 'content/talks/*.md'
   },
   pages: {
     pattern: '*.md',

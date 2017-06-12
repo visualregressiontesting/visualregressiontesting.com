@@ -4,6 +4,7 @@ $yellow: #EA9206;
 $green: #049970;
 $light-gray: #efefef;
 $gray: #ccc;
+$purple: #7A57D1;
 
 html {
   -webkit-box-sizing: border-box;
@@ -94,6 +95,9 @@ a {
     [data-category="tools"] &{
       background: $green;
     }
+    [data-category="talks"] &{
+      background: $purple;
+    }
   }
   &-items {
     display: flex;
@@ -132,6 +136,9 @@ a {
         }
         [data-category="tools"] &{
           background: $green;
+        }
+        [data-category="talks"] &{
+          background: $purple;
         }
       }
 
